@@ -1,6 +1,7 @@
 context("limma_find_markers")
 
 test_that("default", {
+  #comment
   res <- limma_find_markers(M, grp=grp, nsim=100)
   expect_equal(rownames(res)[which.min(res$Last3.up.p)], "gene2")
   expect_equal(rownames(res)[which.min(res$Middle3.up.p)], "gene1")
